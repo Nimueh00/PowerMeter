@@ -423,7 +423,7 @@ struct PanelView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .firstTextBaseline) {
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("Panel").font(.headline)
+                    Text("PowerMeter").font(.headline)
                     Text(status).font(.caption).foregroundStyle(.secondary)
                 }
                 Spacer()

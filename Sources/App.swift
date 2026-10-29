@@ -222,7 +222,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                                  action: #selector(toggleLoginItem), keyEquivalent: "")
         login.state = SMAppService.mainApp.status == .enabled ? .on : .off
         menu.addItem(.separator())
-        menu.addItem(withTitle: "Panel'den çık", action: #selector(quit), keyEquivalent: "q")
+        menu.addItem(withTitle: "PowerMeter'dan çık", action: #selector(quit), keyEquivalent: "q")
         for item in menu.items { item.target = self }
 
         statusItem.menu = menu
@@ -244,7 +244,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             try SMAppService.mainApp.register()
             UserDefaults.standard.set(true, forKey: key)
         } catch {
-            NSLog("Panel: giriş öğesi eklenemedi: \(error)")
+            NSLog("PowerMeter: giriş öğesi eklenemedi: \(error)")
         }
     }
 
@@ -258,7 +258,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 if service.status == .requiresApproval { SMAppService.openSystemSettingsLoginItems() }
             }
         } catch {
-            NSLog("Panel: giriş öğesi değiştirilemedi: \(error)")
+            NSLog("PowerMeter: giriş öğesi değiştirilemedi: \(error)")
             SMAppService.openSystemSettingsLoginItems()
         }
     }
